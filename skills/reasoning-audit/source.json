@@ -1,0 +1,7 @@
+{
+  "name": "reasoning-audit",
+  "source": "local",
+  "type": "local",
+  "description": "推理审计：叙事/大决策前的红队自检。挑战自己的方案——逻辑硬伤、因果链完整、NPC动机锚点(OOC)、证据链自洽、世界一致性。配合 sequential-thinking（正向推演）使用，本skill负责反向质疑。",
+  "installedAt": "2026-08-06T00:00:00Z"
+}

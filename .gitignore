@@ -1,0 +1,9 @@
+
+# memini: DB and hook shim are local; markdown views are committed
+.memini/memory.db
+.memini/memory.db-*
+.memini/hooks/
+
+# SQLite 经济库与 Qdrant 语义库（本地数据，不入 git）
+campaign.db
+.qdrant/

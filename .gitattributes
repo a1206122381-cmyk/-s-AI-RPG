@@ -1,0 +1,3 @@
+# memory.json 是 @modelcontextprotocol/server-memory 的存储文件（JSONL）。
+# 强制 LF 行尾：防止 git 在 Windows 上 autocrlf 转成 CRLF，导致 server 解析 JSONL 时每行尾随 \r 而崩溃。
+memory.json text eol=lf

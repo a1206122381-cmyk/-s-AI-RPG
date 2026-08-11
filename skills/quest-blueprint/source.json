@@ -1,0 +1,7 @@
+{
+  "name": "quest-blueprint",
+  "source": "local",
+  "type": "local",
+  "description": "任务线底牌页生成器：玩家推进某任务线/调查线时，动态生成 quests/<line>.md 底牌页(真相/大纲/涉及NPC立场/动机锚点)。防人设漂移(OOC)与因果不自洽；真相有证据链不凭空揭晓；一次性任务NPC留在线文件内。",
+  "installedAt": "2026-08-06T00:00:00Z"
+}

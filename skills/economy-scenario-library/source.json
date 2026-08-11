@@ -1,0 +1,7 @@
+{
+  "name": "economy-scenario-library",
+  "source": "local",
+  "type": "local",
+  "description": "经济场景库：把高频经济决策(立项/扩产/地产/武装/时间推进/战略)固化为参数化脚本模板，配合 economy-engine 使用，避免每次重写 econ-*.js。先列假设、数字由世界事实推出、只输出关键取舍。",
+  "installedAt": "2026-08-06T00:00:00Z"
+}

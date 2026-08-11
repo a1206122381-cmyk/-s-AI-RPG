@@ -1,0 +1,7 @@
+{
+  "name": "timeline-manager",
+  "source": "local",
+  "type": "local",
+  "description": "日历与时间线管理：统一记录世界日期/季节(如边境历圣炉节后第N日)，推进天数→季节换算，跨季自动带出季节事件(冬市/封山/收获等)。防时间线漂移；配合 scripts/date.js 与 scripts/season-event.js 使用。",
+  "installedAt": "2026-08-06T00:00:00Z"
+}

@@ -1,0 +1,30 @@
+{
+  "mcpServers": {
+    "sequential-thinking": {
+      "command": "node",
+      "args": ["C:/Users/dlzhi/OneDrive/Desktop/TEST/New C/.mcp/node_modules/@modelcontextprotocol/server-sequential-thinking/dist/index.js"]
+    },
+    "memory": {
+      "command": "node",
+      "args": ["C:/Users/dlzhi/OneDrive/Desktop/TEST/New C/.mcp/node_modules/@modelcontextprotocol/server-memory/dist/index.js"],
+      "env": {
+        "MEMORY_FILE_PATH": "C:/Users/dlzhi/OneDrive/Desktop/TEST/N2/memory.json"
+      }
+    },
+    "alchemy": {
+      "command": "uvx",
+      "args": ["--from", "mcp-alchemy", "mcp-alchemy"],
+      "env": {
+        "DB_URL": "sqlite:///C:/Users/dlzhi/OneDrive/Desktop/TEST/N2/campaign.db"
+      }
+    },
+    "qdrant": {
+      "command": "uvx",
+      "args": ["--python", "3.12", "--with", "onnxruntime==1.20.1", "--from", "mcp-server-qdrant", "mcp-server-qdrant"],
+      "env": {
+        "QDRANT_LOCAL_PATH": "C:/Users/dlzhi/OneDrive/Desktop/TEST/N2/.qdrant",
+        "COLLECTION_NAME": "campaign-memories"
+      }
+    }
+  }
+}
