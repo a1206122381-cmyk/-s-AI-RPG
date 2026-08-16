@@ -7,3 +7,4 @@
 # SQLite 经济库与 Qdrant 语义库（本地数据，不入 git）
 campaign.db
 .qdrant/
+map.html

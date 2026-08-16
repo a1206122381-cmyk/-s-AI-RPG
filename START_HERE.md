@@ -186,7 +186,7 @@
 
 ## 6. 数据安全（git）
 
-- **只做本地 `commit`，绝不 `push`，绝不加 `remote`。** 仓库无远程，物理上无法上传。
+- **只做本地 `commit`；唯一允许的 `push` = 私有仓库 `AI-RPG` 的 `GSG(大战略)` 分支（朋友分发用，见 `INSTALL.md`）；绝不 push 到公开仓库、绝不加其他 `remote`。**
 - 提交命令：
   ```powershell
   $git = "C:\Program Files\Git\cmd\git.exe"
@@ -230,10 +230,20 @@
 
 ---
 
-## 10. 启动咒语（用户复制到新对话首条）
+## 10. 启动咒语（克隆后首次运行：先自举配置，再启动）
+
+> 首次在克隆目录里运行时，把下面代码块**完整贴到新对话首条**。它会让本机 Kimi Code 先自检并补齐配置（skills 目录 / DeepSeek 模型 key / MCP），就绪后自动进入四阶段启动。已配置好的环境再次贴同一段，会直接跳过配置进游戏。
 
 ```
-读 C:/Users/dlzhi/OneDrive/Desktop/TEST/N2/START_HERE.md，按其第 1 节启动一个全新的长期文字游戏（RPG+GSG+SIM+SLG 四合一）：先读 WORLD_GEN.md 与我协作生成世界（阶段一），世界确认后再读 POLITICS_GEN.md 生成政治地缘（阶段二），然后读 CHARACTER_GEN.md 确立领地、主角与班底（阶段三），最后以场景化方式开局并进入正式游玩（阶段四）。全程按手册用 memory + 世界册 + git 维护状态，并在合适场景按 §3 决策表调用已配 MCP（memory / sequential-thinking / alchemy / qdrant；其余用内置工具）。
+项目根目录 = 你当前工作目录（若不确定就向我索取克隆路径）。先读 `INSTALL.md` 和 `START_HERE.md`。
+
+【第一步 · 自举配置】（仅在尚未就绪时做）
+1. 检查 `~/.kimi-code/config.toml`：确保 `extra_skill_dirs` 包含 `<项目根目录>/skills`（以及 `~/.claude/skills` 若存在）；确保有可用的 DeepSeek provider 与 `deepseek/deepseek-v4-flash` 模型；API key 缺失时向我索取并写入。
+2. 检查 `~/.kimi-code/mcp.json`：确保 4 个 MCP——memory（`MEMORY_FILE_PATH=<项目根目录>/memory.json`）、alchemy（`DB_URL=sqlite:///<项目根目录>/campaign.db`）、qdrant（`QDRANT_LOCAL_PATH=<项目根目录>/.qdrant`、`COLLECTION_NAME=campaign-memories`）、sequential-thinking。可把 `<项目根目录>/.mcp.json` 的内容写入 `~/.kimi-code/mcp.json`，并把相对路径改成绝对路径。
+3. 若做了任一处修改：回复「配置已完成，请重启会话后再次粘贴本条消息」，然后**停在这里**。
+4. 若全部已就绪：进入第二步。
+
+【第二步 · 启动游戏】按 `START_HERE.md` 第 1 节启动四阶段——先读 `WORLD_GEN.md` 生成世界（阶段一），确认后读 `POLITICS_GEN.md` 生成政治地缘（阶段二），再读 `CHARACTER_GEN.md` 确立领地/主角/班底（阶段三），最后以场景化方式开局进入正式游玩（阶段四）。全程按手册用 memory + 世界册 + git 维护状态，合适场景按 §3 决策表调用 MCP。
 ```
 
 ---
