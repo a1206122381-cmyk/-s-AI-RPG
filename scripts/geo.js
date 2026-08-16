@@ -272,7 +272,7 @@ function renderAscii(m) {
     const a = loc[r.from], c = loc[r.to];
     if (!a || !c) continue;
     bresenham(a.x - b.minX, a.y - b.minY, c.x - b.minX, c.y - b.minY, (x, y) => {
-      if (x >= 0 && x < b.W && y >= 0 && y < b.H && grid[y][x] === ' ') grid[y][x] = '·';
+      if (x >= 0 && x < b.W && y >= 0 && y < b.H) grid[y][x] = '·';
     });
   }
   for (const l of (m.locations || [])) {
