@@ -42,6 +42,7 @@
 - 名称与类型（王廷/大贵族/邻家领主/教会/城市/行会/邻国）
 - 统治结构：世系简谱、继承状况
 - 领地范围与资源：收入量级、兵源
+- **地图位置**（写入 `map.json`）：`location` 坐标、与邻接势力的 `route` 路程时间、辖地与接壤 `territory`（用 `scripts/geo.js` 校验）
 - 封臣链位置：对谁宣誓、谁对其宣誓
 - 派系归属与立场
 - 与主角领地的利害关系：相邻/间接/无关，恩怨史
@@ -80,6 +81,6 @@
 ═══════════════════════════════
 
 - **memory**：每确立一个势力，`create_entities` + `create_relations`（封臣/联姻/敌对/派系等关系，**串行**）；核心目的与底线锚点作为该实体观察一并写入；
-- **filesystem**：势力本体 → `politics.md`；势力台账与成员台账 → `politics-ledgers.md`；均已按模板建好。
+- **filesystem**：势力本体 → `politics.md`；势力台账与成员台账 → `politics-ledgers.md`；**地图事实 → `map.json`（location/route/territory，用 `scripts/geo.js` 校验）**；均已按模板建好。
 
 本阶段完成后向玩家整体确认，进入 `CHARACTER_GEN.md`（阶段三 · 人物与势力）。

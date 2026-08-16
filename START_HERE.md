@@ -122,23 +122,25 @@
 |---|---|
 | 生成世界 / 开新地图 / 势力 / 体系 | `worldbuilding` + `brainstorming` |
 | 生成政治地缘 / 派系 / 宫廷 | `worldbuilding` + `plot-structure`（派系按西式宫廷逻辑，禁现代政党化） |
-| 规划新剧情线 / 埋伏笔 | `story-planning` + `plot-structure` |
+| 规划新剧情线 / 埋伏笔 | `plot-structure` + `writing-plans` |
 | 创建或更新角色档案 | `character-management` |
-| 写场景 / 对话 / 扮演 NPC | `character-sim` + `creative-writing-craft` |
-| 写章节正文 | `chapter-writing` + `creative-writing-modes` |
-| 单 agent 内自兼策划/写作/批判/研究/记忆 | `creative-writing-muse`（切换 stance） |
+| 写场景 / 对话 / 扮演 NPC | `deepseek_v4_rolepaly_instruct` + `better-writing` |
+| 写章节正文 | `chapter-writing` + `better-writing` |
+| 单 agent 内自兼策划/写作/批判/研究/记忆 | `plot-structure` + `chapter-writing`（研究用内置 FetchURL，记忆用 memory MCP） |
 | 章末 / 怀疑有矛盾 | `revision-continuity` + `story-maintenance` |
-| 自检读者体验 | `reader-sim` + `writing-principles` |
-| 事实考证（历史/文化质感） | `creative-research`（联网考证可用内置 FetchURL） |
+| 自检读者体验 | `revision-continuity` + `better-writing` |
+| 事实考证（历史/文化质感） | 内置 `FetchURL` 联网考证（项目 `skills/` 另有 `creative-research`） |
 | 多步骤复杂任务规划 | `writing-plans` |
 | 写完后去中文 AI 腔 | `humanizer-zh` |
-| 持久化记忆方法论参考 | `story-memory` |
+| 持久化记忆方法论参考 | memory MCP / `memory.json`（项目 `skills/` 另有 `story-memory`） |
 | 商会经营 / 领地财政 / 收支利润 / 兵力人口演算 | `economy-engine`（计算外包给代码，只输出关键取舍） |
 | 经济场景复用（立项/扩产/地产/武装/推进/战略） | `economy-scenario-library`（参数化模板，不重写脚本） |
 | 进入任务线时生成底牌页 | `quest-blueprint`（真相/大纲/NPC立场/动机锚点） |
 | 时间推进/季节管理 | `timeline-manager`（日历/季节事件/防时间线漂移） |
-| 叙事/大决策前红队自检 | `reasoning-audit`（逻辑硬伤/因果链/NPC动机锚点/证据链/世界一致性） |
+| 叙事/大决策前红队自检 | `sequential-thinking`（逻辑硬伤/因果链/NPC动机锚点/证据链/世界一致性；项目 `skills/` 另有 `reasoning-audit`） |
 | 维护/校验项目结构 | `story-maintenance` |
+
+> 项目 `skills/` 另有 12 个未在当前会话默认加载（`story-planning` / `character-sim` / `creative-writing-craft` / `creative-writing-modes` / `creative-writing-muse` / `reader-sim` / `writing-principles` / `creative-research` / `story-memory` / `reasoning-audit` / `story-review` / `writing-staffing`）。配 `extra_skill_dirs` 指向项目 `skills/` 并重启会话后即可加载；未加载时按上表降级执行。
 
 > Skills（worldbuilding / character-management 等自带 `locations/`、story CLI 目录结构）仅作**内容与清单指引**；**文件布局以本手册为准**（`state.md` / `world.md` / `politics.md` / `characters/` / `ledger.md` 等）。
 
@@ -171,6 +173,7 @@
 | 日期/时间推进换算 | **`scripts/date.js`** | `node scripts/date.js <第N日>` / `node scripts/date.js add <天> <起点>` / `now <第N日>`——换算月/季/星期/节庆，禁止口算 |
 | 经济演算（六场景参数化） | **`scripts/econ.js`** | `node scripts/econ.js product\|expand\|buyprops\|orgs\|timeskip\|strategy <json>`——立项/扩产/地产/武装/推进/战略；库外场景才现写 econ-*.js |
 | 存档校验 / 对账 / 底牌页 / 人物检索 / 季节 / skills校验 | **`scripts/*.js`** | `save-verify.js`（存后校验）`ledger-check.js`（对账）`blueprint-gen.js`（底牌页）`npc-registry.js`（人物索引）`season-event.js`（季节事件）`skill-index.js`（skills完整性） |
+| 地图查询/可视化（路径/邻接/可达/辖地/ASCII/HTML） | **`scripts/geo.js`** | `node scripts/geo.js path\|neighbors\|reach\|claims\|render [--map <文件>]`——查询结构化 `map.json`；`render html` 写 `map.html` |
 | 查看 memory.json 结构 | **memory MCP / node** | ⚠️ memory.json 是 **JSONL**（每行一个 JSON 对象），**禁止 `jq '.'` / `JSON.parse` 整文件解析**（会误报损坏、诱发危险的手动重写，见 save-protocol §4）。查询用 memory MCP（`search_nodes`），健康校验跑 `node scripts/check-memory.js`（只读） |
 | 文件处理、算账目、生成 HTML/SVG 图表 | **Node.js** | 按需 |
 | 辅助文本处理 | **Python / Bash** | 按需 |

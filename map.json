@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "title": "",
+    "coordinateSystem": "grid",
+    "scaleKmPerCell": 20,
+    "hoursPerDay": 8,
+    "pacings": {
+      "foot": { "kmPerHour": 4, "label": "步行" },
+      "horse": { "kmPerHour": 7, "label": "骑马" },
+      "wagon": { "kmPerHour": 3, "label": "马车" }
+    },
+    "terrainCost": {
+      "road": 0.8,
+      "trail": 1.0,
+      "plain": 1.0,
+      "ford": 1.2,
+      "forest": 1.4,
+      "hill": 1.5,
+      "river": 1.5,
+      "swamp": 2.0,
+      "mountain": 2.0,
+      "sea": 1.0
+    }
+  },
+  "locations": [],
+  "routes": [],
+  "territories": [],
+  "terrain": []
+}
