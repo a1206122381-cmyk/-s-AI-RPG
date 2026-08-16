@@ -78,7 +78,7 @@ git log --oneline -3
 
 ## 6. 开始
 
-**Kimi Code 用户（最快路径）**：clone 后直接贴 `START_HERE.md` §10 的启动咒语，它会自动补齐 `extra_skill_dirs`、DeepSeek 模型 key、`~/.kimi-code/mcp.json`；只填一次你的 DeepSeek key，重启后再贴一次即可进游戏。
+**Kimi Code 用户（最快路径）**：clone 后直接贴 `START_HERE.md` §10 的启动咒语，它会自动补齐 `extra_skill_dirs` 和 `~/.kimi-code/mcp.json`；**你已配置的模型 key 保持不动**，重启后再贴一次即可进游戏。
 
 手动方式：读 `START_HERE.md` → 按四阶段启动（阶段一 `WORLD_GEN.md` 世界 → 阶段二 `POLITICS_GEN.md` 政治地缘 → 阶段三 `CHARACTER_GEN.md` 人物与势力）或直接续玩。
 

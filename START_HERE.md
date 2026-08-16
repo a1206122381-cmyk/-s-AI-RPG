@@ -238,7 +238,7 @@
 项目根目录 = 你当前工作目录（若不确定就向我索取克隆路径）。先读 `INSTALL.md` 和 `START_HERE.md`。
 
 【第一步 · 自举配置】（仅在尚未就绪时做）
-1. 检查 `~/.kimi-code/config.toml`：确保 `extra_skill_dirs` 包含 `<项目根目录>/skills`（以及 `~/.claude/skills` 若存在）；确保有可用的 DeepSeek provider 与 `deepseek/deepseek-v4-flash` 模型；API key 缺失时向我索取并写入。
+1. 检查 `~/.kimi-code/config.toml`：**你已配置好的模型与 API key 保持不动**；只确保 `extra_skill_dirs` 包含 `<项目根目录>/skills`（以及 `~/.claude/skills` 若存在）。仅当完全没有任何可用模型时才向我索取 key。
 2. 检查 `~/.kimi-code/mcp.json`：确保 4 个 MCP——memory（`MEMORY_FILE_PATH=<项目根目录>/memory.json`）、alchemy（`DB_URL=sqlite:///<项目根目录>/campaign.db`）、qdrant（`QDRANT_LOCAL_PATH=<项目根目录>/.qdrant`、`COLLECTION_NAME=campaign-memories`）、sequential-thinking。可把 `<项目根目录>/.mcp.json` 的内容写入 `~/.kimi-code/mcp.json`，并把相对路径改成绝对路径。
 3. 若做了任一处修改：回复「配置已完成，请重启会话后再次粘贴本条消息」，然后**停在这里**。
 4. 若全部已就绪：进入第二步。
