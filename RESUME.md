@@ -35,13 +35,13 @@
 | 12 | `arms.md` | 武装线（戍卫/民兵/战利品/抚恤；若已展开） |
 | 13 | `expedition.md` | 外出事务线（护送/调查/清剿/主线钩子；若已展开） |
 
-> **战役形态（玩家定版）**：领地开局变体——主角为没落小贵族女继承人，开局继承贫瘠领地并面临危机；主题=领地发展+政治博弈，保留角色扮演与感情线。凤傲天/长寿/女同生子/后宫保留。机制（四轮/间章/存档/计算/线级推进）不变。启动为**四阶段**：世界（WORLD_GEN）→ 政治地缘（POLITICS_GEN，一势力一条+势力台账）→ 人物与势力（CHARACTER_GEN）→ 正式游玩。
+> **战役形态（玩家定版）**：领地开局变体——主角为没落小贵族女继承人，开局继承贫瘠领地并面临危机；主题=领地发展+政治博弈，保留角色扮演与感情线。凤傲天/长寿/女同生子/后宫保留。机制（五轮/间章/存档/计算/线级推进）不变。启动为**四阶段**：世界（WORLD_GEN）→ 政治地缘（POLITICS_GEN，一势力一条+势力台账）→ 人物与势力（CHARACTER_GEN）→ 正式游玩。
 
 > **线级推进**：state.md 顶部「当前主线线」标注当前推进哪条线；恢复后按该线读对应专题文件。**玩家定版「主线+支线简报」模式**：主线推进时，叙事轮结尾附简短「视野外支线动态」（可能有进展的支线各一两句）；需大量思考/演算的支线指出后留到下一条专门推。
 
 > **工具箱（scripts/ 现成程序，恢复后即用）**：`date.js`（日期/季节换算）、`econ.js`（六场景经济演算）、`save.js`（半自动存档：校验+add+commit+强制出哈希）、`save-verify.js`（存档校验）、`ledger-check.js`（对账）、`blueprint-gen.js`（任务线底牌页）、`npc-registry.js`（人物索引）、`season-event.js`（季节事件）、`skill-index.js`（skills校验）。用法详见 AGENTS.md「工具箱」节。
 
-> **Skills 增补**：`reasoning-audit`（叙事前红队自检）、`quest-blueprint`（任务线底牌页）、`timeline-manager`（日历）、`economy-scenario-library`（经济场景库）。可选 MCP（backlog/docguard/mason/memini/robrain）按 setup 条件装，未装不阻塞。
+> **Skills**：项目自带 `skills/` 目录 31 个（含 `reasoning-audit` 红队自检 / `quest-blueprint` 任务线底牌页 / `timeline-manager` 日历 / `economy-scenario-library` 经济场景库等），按 START_HERE.md 触发表加载。可选 MCP 以项目 `.mcp.json` 为准，未装不阻塞。
 
 > **跳过**：`WORLD_GEN.md` / `POLITICS_GEN.md` / `CHARACTER_GEN.md` 是阶段一/二/三的**生成指令**，世界、政治版图与角色已生成并存档，恢复时无须读；仅当要扩写或重新生成时才参考。
 
