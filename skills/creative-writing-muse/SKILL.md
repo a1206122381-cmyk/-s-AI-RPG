@@ -1,9 +1,7 @@
 ---
 name: creative-writing-muse
 type: mode-shift
-description: "Load when no subagents are available and one agent must plan, draft,"
-
-  critique, research, and capture memory by switching stances.
+description: "Load when no subagents are available and one agent must plan, draft, critique, research, and capture memory by switching stances."
 model-invocable: false
 ---
 

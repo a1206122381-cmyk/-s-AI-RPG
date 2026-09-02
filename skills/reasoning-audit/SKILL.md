@@ -1,6 +1,6 @@
 ---
 name: reasoning-audit
-description: Use when designing or advancing a complex plot arc, multi-party negotiation, investigation with evidence chains, or any scene where logical holes / causality breaks / NPC motivation inconsistencies could appear. Runs a structured "red-team audit" before narrating: challenge your own plan, verify causal chains, check NPC motivation anchors, and validate evidence chains. Companion to sequential-thinking (which does the step-by-step reasoning; this skill audits the result).
+description: 'Use when designing or advancing a complex plot arc, multi-party negotiation, investigation with evidence chains, or any scene where logical holes / causality breaks / NPC motivation inconsistencies could appear. Runs a structured "red-team audit" before narrating: challenge your own plan, verify causal chains, check NPC motivation anchors, and validate evidence chains. Companion to sequential-thinking (which does the step-by-step reasoning; this skill audits the result).'
 ---
 
 # Reasoning Audit · 推理审计

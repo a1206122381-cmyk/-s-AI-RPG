@@ -1,10 +1,7 @@
 ---
 name: writing-staffing
 type: reference
-description: "Dispatch reference for composing writing teams. Teaches which extra skills"
-
-  to attach via --skills, which resources to reference in spawn prompts, and
-  when to fan out. Load when staffing a workflow.
+description: "Dispatch reference for composing writing teams. Teaches which extra skills to attach via --skills, which resources to reference in spawn prompts, and when to fan out. Load when staffing a workflow."
 model-invocable: false
 ---
 

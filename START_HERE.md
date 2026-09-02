@@ -124,7 +124,7 @@
 | 生成政治地缘 / 派系 / 宫廷 | `worldbuilding` + `plot-structure`（派系按西式宫廷逻辑，禁现代政党化） |
 | 规划新剧情线 / 埋伏笔 | `plot-structure` + `writing-plans` |
 | 创建或更新角色档案 | `character-management` |
-| 写场景 / 对话 / 扮演 NPC | `deepseek_v4_rolepaly_instruct` + `better-writing` |
+| 写场景 / 对话 / 扮演 NPC | `deepseek-v4-roleplay-instruct` + `better-writing` |
 | 写章节正文 | `chapter-writing` + `better-writing` |
 | 单 agent 内自兼策划/写作/批判/研究/记忆 | `plot-structure` + `chapter-writing`（研究用内置 FetchURL，记忆用 memory MCP） |
 | 章末 / 怀疑有矛盾 | `revision-continuity` + `story-maintenance` |
@@ -252,5 +252,5 @@
 
 - **MCP**：memory / sequential-thinking / alchemy（SQLite）/ qdrant（语义库），配置在 `~/.kimi-code/mcp.json`（修改后需重启会话生效）
 - **工具**：Node.js / Python / Bash / rg / git（全路径 `C:\Program Files\Git\cmd\git.exe`）
-- **Skills（31）**：better-writing, brainstorming, chapter-writing, character-management, character-sim, creative-research, creative-writing-craft, creative-writing-modes, creative-writing-muse, deepseek_v4_rolepaly_instruct, economy-engine, economy-scenario-library, find-skills, humanizer-zh, pdf, plot-structure, quest-blueprint, reader-sim, reasoning-audit, revision-continuity, story-init, story-maintenance, story-memory, story-planning, story-review, timeline-manager, worldbuilding, writing-plans, writing-principles, writing-skills, writing-staffing
+- **Skills（31）**：better-writing, brainstorming, chapter-writing, character-management, character-sim, creative-research, creative-writing-craft, creative-writing-modes, creative-writing-muse, deepseek-v4-roleplay-instruct, economy-engine, economy-scenario-library, find-skills, humanizer-zh, pdf, plot-structure, quest-blueprint, reader-sim, reasoning-audit, revision-continuity, story-init, story-maintenance, story-memory, story-planning, story-review, timeline-manager, worldbuilding, writing-plans, writing-principles, writing-skills, writing-staffing
 - **模型**：随运行环境而定（不在此硬编码；以当前会话实际模型为准）
