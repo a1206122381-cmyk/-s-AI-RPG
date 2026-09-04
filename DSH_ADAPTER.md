@@ -53,6 +53,7 @@
 | qdrant（uvx） | qdrant | 项目 `.qdrant/`，collection `campaign-memories`，Python 3.12 + onnxruntime 1.20.1，HF_ENDPOINT=hf-mirror.com |
 
 - 首次启动会下载依赖（uv 缓存），已在本机预热过；qdrant 向量模型 `all-MiniLM-L6-v2` 走国内镜像。
+- ⚠️ **uvx 服务不配置代理（直连）**：代理端口 10808 不常在（VPN 时开时关），写死代理会导致 uvx 启动时连不上 PyPI 而崩溃重试。若日后 uv 缓存失效需要拉新包，先开代理手动预热一次即可。
 
 ## 5. DSH 新对话启动提示词
 
