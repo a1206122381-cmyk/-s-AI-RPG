@@ -65,7 +65,7 @@
 ## 7. 工具无关的环境假设
 
 - 本战役只依赖：**文件读写 + git CLI + Node.js**（跑 `scripts/`）。
-- `scripts/` 内工具：`date.js`（历法）、`econ.js`（经济演算）、`save.js`（半自动存档+哈希，自动跑 rule-check）、`save-verify.js`（校验）、`ledger-check.js`（对账）、`blueprint-gen.js`（底牌页）、`npc-registry.js`（人物索引）、`season-event.js`（季节事件）、`skill-index.js`（skills 校验）、`context-fetch.js`（每轮上下文注入兜底）、`rule-check.js`（协议词表自检）、`dashboard.js`（单文件战役面板）。
+- `scripts/` 内工具：`date.js`（历法）、`econ.js`（经济演算）、`save.js`（半自动存档+哈希，自动跑 rule-check）、`save-verify.js`（校验）、`ledger-check.js`（对账）、`blueprint-gen.js`（底牌页）、`npc-registry.js`（人物索引）、`season-event.js`（季节事件）、`skill-index.js`（skills 校验）、`context-fetch.js`（每轮上下文注入兜底）、`rule-check.js`（协议词表自检）、`dashboard.js`（单文件战役面板）、`env-check.js`（环境就绪检查，not-ready 按 `SETUP.md` 自举）。
 - 若你的环境有 MCP（memory/filesystem/sequential-thinking/fetch 等）则用；没有就用上述降级映射（纯文本）。
 
 ## 8. 开始游玩

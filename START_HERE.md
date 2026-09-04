@@ -177,6 +177,7 @@
 | 每轮上下文注入·兜底检索 | **`scripts/context-fetch.js`** | `node scripts/context-fetch.js [关键词]`——无参数时从 `state.md` 自动提取关键词，扫 `memory.json` 输出相关实体+观察+关系；MCP 可用时优先 `qdrant-find` / `search_nodes` |
 | 协议词表自检 | **`scripts/rule-check.js`** | `node scripts/rule-check.js <文件\|--diff\|--stdin\|--demo>`——禁三词/日式元素/中式官制扫描；`save.js` 存档前自动跑（仅警告不阻断） |
 | 战役面板 | **`scripts/dashboard.js`** | `node scripts/dashboard.js`——生成单文件 `dashboard.html`（state 快照+账本摘要+地图 ASCII+最近存档），浏览器直开，存档后重跑刷新 |
+| 环境就绪检查 / 自举 | **`scripts/env-check.js` + `SETUP.md`** | `node scripts/env-check.js [--json]`——新会话首轮检查 node/git/uv、MCP 配置、技能挂载；not-ready 按 `SETUP.md` 自举配置 |
 | 查看 memory.json 结构 | **memory MCP / node** | ⚠️ memory.json 是 **JSONL**（每行一个 JSON 对象），**禁止 `jq '.'` / `JSON.parse` 整文件解析**（会误报损坏、诱发危险的手动重写，见 save-protocol §4）。查询用 memory MCP（`search_nodes`），健康校验跑 `node scripts/check-memory.js`（只读） |
 | 文件处理、算账目、生成 HTML/SVG 图表 | **Node.js** | 按需 |
 | 辅助文本处理 | **Python / Bash** | 按需 |

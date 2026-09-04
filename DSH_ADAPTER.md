@@ -58,7 +58,9 @@
 
 ## 5. DSH 新对话启动提示词
 
-切换对话开玩时，把下面代码块完整贴到新对话首条：
+**首选流程（无需贴提示词）**：新对话把工作目录设为项目文件夹，直接说「开始玩吧」——AGENTS.md 自动加载，agent 首轮会跑 `node scripts/env-check.js`；未就绪则按 `SETUP.md` 自举配置，就绪后自动进入四阶段。
+
+**备用（自动加载失效或换对话恢复时）**，把下面代码块完整贴到新对话首条：
 
 ```
 项目目录：C:\Users\dlzhi\OneDrive\Desktop\normal use\s-AI-RPG-play
