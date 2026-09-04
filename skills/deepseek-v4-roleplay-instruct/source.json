@@ -1,0 +1,7 @@
+{
+  "name": "deepseek-v4-roleplay-instruct",
+  "source": "local",
+  "type": "local",
+  "description": "角色扮演叙事的两类思考模式参考(角色沉浸/纯分析),本项目原创改写(2026-09-04),不含第三方原文。",
+  "installedAt": "2026-09-04T00:00:00Z"
+}
