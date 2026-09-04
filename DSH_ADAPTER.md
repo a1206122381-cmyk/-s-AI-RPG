@@ -9,7 +9,7 @@
 ## 1. 项目目录与远程
 
 - 游戏克隆：`C:\Users\dlzhi\OneDrive\Desktop\normal use\s-AI-RPG-play`
-- 分支：`GSG`；`origin` = Gitee 私有仓库 `hkfg1206/s-AI-RPG`（主），`github` = GitHub 私有仓库 `a1206122381-cmyk/-s-AI-RPG`（镜像）
+- 分支：`GSG`；`origin` = Gitee 公开仓库 `hkfg1206/s-AI-RPG`（主），`github` = GitHub 公开仓库 `a1206122381-cmyk/-s-AI-RPG`（镜像）
 - git 身份：a1206122381-cmyk（存档提交沿用）
 
 ## 2. 工具映射（Kimi Code → DSH）

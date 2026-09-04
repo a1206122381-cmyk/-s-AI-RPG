@@ -134,4 +134,4 @@
 - **Skills**：项目自带 `skills/` 目录全套（30 个，含 worldbuilding / character-management / character-sim / chapter-writing / quest-blueprint / timeline-manager / economy-engine / economy-scenario-library / reasoning-audit / humanizer-zh / better-writing 等），按 `START_HERE.md` 触发表在对应场景加载；skill 机制不可用时按同名工作流的精神直接执行。第三方技能许可见 `THIRD_PARTY_NOTICES.md`。
 - **memory.json 是 JSONL**（每行一个 JSON 对象）：禁止整文件 `JSON.parse` / `jq '.'`（会误报损坏）；按行解析或直接用 memory MCP；存档后可选跑 `node scripts/check-memory.js` 校验。memory 写操作须串行（read-modify-write，并发会丢更新）。
 - **会话切换**：结束前更新 `RESUME.md`（含「当前状态」节），玩家新对话首条贴它的内容即可恢复。
-- git 只本地提交；唯一允许的 push = 私有仓库 AI-RPG 的 GSG(大战略) 分支（朋友分发用，见 INSTALL.md）；绝不 push 到公开仓库、绝不加其他 remote。
+- git 只本地提交；唯一允许的 push = AI-RPG 仓库的 GSG 分支（仓库现为公开，推送前务必确认不含隐私/密钥/未授权第三方内容）；不 push 其他仓库、不加其他 remote。
