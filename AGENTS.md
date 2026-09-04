@@ -131,7 +131,7 @@
     - 无 sequential-thinking → 用思考提纲（思维链书面化）；
   - **README_AGENTS.md**（本目录另附）：给任意 agent 的"如何接管本战役"指引（读哪些文件、按什么协议、五类轮怎么切）。
 - **LSP**：markdown-oxide 若已装（需 cargo），自动配为 .md 的 LSP 检查引用断裂；未装则由 `save-verify.js` 兜底检查。
-- **Skills**：项目自带 `skills/` 目录全套（31 个，含 worldbuilding / character-management / character-sim / chapter-writing / quest-blueprint / timeline-manager / economy-engine / economy-scenario-library / reasoning-audit / humanizer-zh / better-writing 等），按 `START_HERE.md` 触发表在对应场景加载；skill 机制不可用时按同名工作流的精神直接执行。
+- **Skills**：项目自带 `skills/` 目录全套（30 个，含 worldbuilding / character-management / character-sim / chapter-writing / quest-blueprint / timeline-manager / economy-engine / economy-scenario-library / reasoning-audit / humanizer-zh / better-writing 等），按 `START_HERE.md` 触发表在对应场景加载；skill 机制不可用时按同名工作流的精神直接执行。第三方技能许可见 `THIRD_PARTY_NOTICES.md`。
 - **memory.json 是 JSONL**（每行一个 JSON 对象）：禁止整文件 `JSON.parse` / `jq '.'`（会误报损坏）；按行解析或直接用 memory MCP；存档后可选跑 `node scripts/check-memory.js` 校验。memory 写操作须串行（read-modify-write，并发会丢更新）。
 - **会话切换**：结束前更新 `RESUME.md`（含「当前状态」节），玩家新对话首条贴它的内容即可恢复。
 - git 只本地提交；唯一允许的 push = 私有仓库 AI-RPG 的 GSG(大战略) 分支（朋友分发用，见 INSTALL.md）；绝不 push 到公开仓库、绝不加其他 remote。

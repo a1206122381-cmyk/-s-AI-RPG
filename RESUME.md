@@ -43,7 +43,7 @@
 
 > **工具箱（scripts/ 现成程序，恢复后即用）**：`date.js`（日期/季节换算）、`econ.js`（六场景经济演算）、`save.js`（半自动存档：校验+add+commit+强制出哈希）、`save-verify.js`（存档校验）、`ledger-check.js`（对账）、`blueprint-gen.js`（任务线底牌页）、`npc-registry.js`（人物索引）、`season-event.js`（季节事件）、`skill-index.js`（skills校验）。用法详见 AGENTS.md「工具箱」节。
 
-> **Skills**：项目自带 `skills/` 目录 31 个（含 `reasoning-audit` 红队自检 / `quest-blueprint` 任务线底牌页 / `timeline-manager` 日历 / `economy-scenario-library` 经济场景库等），按 START_HERE.md 触发表加载。可选 MCP 以项目 `.mcp.json` 为准，未装不阻塞。
+> **Skills**：项目自带 `skills/` 目录 30 个（含 `reasoning-audit` 红队自检 / `quest-blueprint` 任务线底牌页 / `timeline-manager` 日历 / `economy-scenario-library` 经济场景库等），按 START_HERE.md 触发表加载。第三方技能许可见 `THIRD_PARTY_NOTICES.md`。可选 MCP 以项目 `.mcp.json` 为准，未装不阻塞。
 
 > **跳过**：`WORLD_GEN.md` / `POLITICS_GEN.md` / `CHARACTER_GEN.md` 是阶段一/二/三的**生成指令**，世界、政治版图与角色已生成并存档，恢复时无须读；仅当要扩写或重新生成时才参考。
 
