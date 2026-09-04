@@ -56,6 +56,16 @@ if (!skipVerify) {
   }
 }
 
+// 1.5 协议词表自检（仅警告，不阻断存档）
+console.log('\n[1.5] 协议自检（rule-check）');
+{
+  const { spawnSync } = require('child_process');
+  const ruleScript = path.join(scriptDir, 'rule-check.js');
+  const res = spawnSync(process.execPath, [ruleScript, '--diff'], { encoding: 'utf8' });
+  if (res.stdout) console.log(res.stdout.trim());
+  if (res.stderr) console.error(res.stderr.trim());
+}
+
 // 2. git add
 console.log('\n[2] git add -A');
 run('git add -A');
