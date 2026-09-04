@@ -5,6 +5,7 @@
 | 署名 | 身份 |
 |---|---|
 | a1206122381-cmyk | 项目所有者 |
+| zyxeupigeon | GitHub 用户（https://github.com/zyxeupigeon） |
 | deepseek harness | AI 助手（DeepSeek Harness） |
 | kimi code | AI 助手（Kimi Code） |
 
